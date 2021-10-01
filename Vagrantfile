@@ -1,3 +1,5 @@
+# v1.0.0 Abdullahi Ahmed 9/27/21 This file contains a change to the VM that allows it to have 2 CPU and 2048 MB of RAM
+#It also connects this vagrant file to a github repository 
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -39,15 +41,16 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+  config.vm.provider "virtualbox" do |vb|
+  # Display the VirtualBox GUI when booting the machine
+    vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
+    vb.memory = "2048"
+    vb.vcpus = 2
+  end
   #
-  # View the documentation for the provider you are using for more
+  # iew the documentation for the provider you are using for more
   # information on available options.
 
   # Enable provisioning with a shell script. Additional provisioners such as
